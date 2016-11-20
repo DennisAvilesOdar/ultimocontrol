@@ -19,6 +19,26 @@ class InicioSesion extends Conexion{
         }
     }
     
+    public function obtenerFoto($dni){
+        
+        $foto = "../imagenes-usuario/".$dni;
+        
+        if (file_exists($foto . ".png")) {
+            $foto = $foto . ".png";
+        }else if (file_exists($foto . ".jpg")){
+            $foto = $foto . ".jpg";
+        }else{
+            $foto = "none";
+        }
+        
+        if ($foto == "none") {
+            return $foto;
+        }else{
+            return Funciones::$DIRECCION_WEB_SERVICE . $foto;
+        }
+        
+    }
+    
     function getEmail() {
         return $this->email;
     }
