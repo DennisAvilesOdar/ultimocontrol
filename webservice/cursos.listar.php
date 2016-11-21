@@ -21,7 +21,7 @@ try {
         for ($i=0; $i<count($resultado);$i++){
             
             /*Obtener foto articulo*/
-            $foto = $obj->obtenerFoto($resultado[$i]["codigo_articulo"]);
+            $foto = $obj->obtenerFoto($resultado[$i]["codigo"]);
             /*Obtener foto articulo*/
             
             $datosArticulo = array
